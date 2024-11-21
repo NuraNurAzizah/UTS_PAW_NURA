@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PERPUSTAKAAN AMIK-YPAT PURWAKARTA</title>
+  <style>
+    /* Reset dasar */
+    body, h1, h2, h3, p, button {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f3f4f6; /* Warna abu-abu terang */
+      color: #333; /* Warna teks gelap */
+    }
+
+    header {
+      background-color: #059669; /* Hijau tua */
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 2.5rem;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    header p {
+      font-size: 1.2rem;
+    }
+
+    main {
+      padding: 20px;
+    }
+
+    h2 {
+      font-size: 1.8rem;
+      margin-bottom: 15px;
+    }
+
+    .grid {
+      display: grid;
+      gap: 20px;
+    }
+
+    .grid-cols-1 {
+      grid-template-columns: 1fr;
+    }
+
+    @media (min-width: 768px) {
+      .grid-cols-3 {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    .book-card {
+      background-color: white;
+      padding: 15px;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .book-card h3 {
+      font-size: 1.2rem;
+      font-weight: bold;
+      margin-bottom: 8px;
+    }
+
+    .book-card p {
+      font-size: 1rem;
+      color: #555;
+    }
+
+    .book-card button {
+      margin-top: 15px;
+      padding: 10px 15px;
+      background-color: #059669;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 1rem;
+    }
+
+    .book-card button:hover {
+      background-color: #047857; /* Hijau lebih tua */
+    }
+
+    footer {
+      background-color: #1f2937; /* Abu-abu gelap */
+      color: white;
+      text-align: center;
+      padding: 15px 0;
+      font-size: 0.9rem;
+    }
+  </style>
+  <script>
+    // Fungsi untuk menangani klik tombol Pinjam
+    function pinjamBuku(judulBuku) {
+      alert("Anda telah meminjam buku: " + judulBuku);
+    }
+  </script>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <h1>PERPUSTAKAAN AMIK-YPAT PURWAKARTA</h1>
+  </header>
+
+  <!-- Main Content -->
+  <main>
+    <!-- Book List -->
+    <section>
+      <h2>Daftar Buku</h2>
+      <div class="grid grid-cols-1 grid-cols-3">
+        <!-- Example Book Card -->
+        <div class="book-card">
+          <h3>Laskar Pelangi</h3>
+          <p>Penulis: Andrea Hirata</p>
+          <button onclick="pinjamBuku('Laskar Pelangi')">Pinjam</button>
+        </div>
+        <div class="book-card">
+          <h3>Cantik Itu Luka</h3>
+          <p>Penulis: Eka Kurniawan</p>
+          <button onclick="pinjamBuku('Cantik Itu Luka')">Pinjam</button>
+        </div>
+        <div class="book-card">
+          <h3>Laut Bercerita</h3>
+          <p>Penulis: Leila S.Chudori</p>
+          <button onclick="pinjamBuku('Laut Bercerita')">Pinjam</button>
+        </div>
+        <div class="book-card">
+          <h3>Koala Kumal</h3>
+          <p>Penulis: Raditya Dika</p>
+          <button onclick="pinjamBuku('Koala Kumal')">Pinjam</button>
+        </div>
+        <div class="book-card">
+          <h3>Entrok</h3>
+          <p>Penulis: Okky Madasari</p>
+          <button onclick="pinjamBuku('Entrok')">Pinjam</button>
+        </div>
+        <div class="book-card">
+          <h3>Perjalanan Menuju Pulang</h3>
+          <p>Penulis: Lala Bohang</p>
+          <button onclick="pinjamBuku('Perjalanan Menuju Pulang')">Pinjam</button>
+        </div>
+        <div class="book-card">
+          <h3>Buya Hamka</h3>
+          <p>Penulis: Haidar Musyafa</p>
+          <button onclick="pinjamBuku('Buya Hamka')">Pinjam</button>
+        </div>
+        <div class="book-card">
+          <h3>Ayat - Ayat Cinta</h3>
+          <p>Penulis: Habiburrahman El Shirazy</p>
+          <button onclick="pinjamBuku('Ayat - Ayat Cinta')">Pinjam</button>
+        </div>
+        <div class="book-card">
+          <h3>Lelaki Harimau</h3>
+          <p>Penulis: Eka Kurniawan</p>
+          <button onclick="pinjamBuku('Lelaki Harimau')">Pinjam</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2024 PERPUSTAKAAN AMIK-YPAT PURWAKARTA</p>
+  </footer>
+</body>
+</html>
